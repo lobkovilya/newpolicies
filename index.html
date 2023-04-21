@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Policy Configuration Generator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/yaml/yaml.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <label for="policies">Enter Policies (YAML):</label>
+      <div id="policies" class="textarea"></div>
+    </div>
+    <div class="right">
+      <div class="input-container">
+        <label for="sourceService">Source:</label>
+        <input type="text" id="sourceService" value="web">
+        <label for="destinationService">Destination:</label>
+        <input type="text" id="destinationService" value="backend">
+      </div>
+      <div id="result" class="textarea"></div>
+    </div>
+  </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
